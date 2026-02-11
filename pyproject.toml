@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "url-shortener"
+version = "0.1.0"
+description = "A small, local URL shortener with JSON or SQLite storage"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+url-shortener = "url_shortener.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["url_shortener"]
